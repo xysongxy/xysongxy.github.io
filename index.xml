@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiangyu Song</title>
+    <link>https://xiangyusong.com/</link>
+      <atom:link href="https://xiangyusong.com/index.xml" rel="self" type="application/rss+xml" />
+    <description>Xiangyu Song</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 24 Aug 2022 11:30:00 +0100</lastBuildDate>
+    <image>
+      <url>https://xiangyusong.com/media/icon_hu6b0088279d2f9a4d573a19eada616c18_29723_512x512_fill_lanczos_center_3.png</url>
+      <title>Xiangyu Song</title>
+      <link>https://xiangyusong.com/</link>
+    </image>
+    
+    <item>
+      <title>Applications of Machine Learning in medical research</title>
+      <link>https://xiangyusong.com/talk/applications-of-machine-learning-in-medical-research/</link>
+      <pubDate>Wed, 24 Aug 2022 11:30:00 +0100</pubDate>
+      <guid>https://xiangyusong.com/talk/applications-of-machine-learning-in-medical-research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Making the most of eczema data for prediction, inference and treatment recommendation</title>
+      <link>https://xiangyusong.com/talk/making-the-most-of-eczema-data-for-prediction-inference-and-treatment-recommendation/</link>
+      <pubDate>Tue, 07 Jun 2022 13:00:00 +0100</pubDate>
+      <guid>https://xiangyusong.com/talk/making-the-most-of-eczema-data-for-prediction-inference-and-treatment-recommendation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PhD project</title>
+      <link>https://xiangyusong.com/project/phd/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://xiangyusong.com/project/phd/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Atopic Dermatitis (AD, eczema) is a common inflammatory skin disease, characterised by dry and itchy skin.
+AD cannot be cured, but its long-term outcomes can be managed with treatments.
+Given the heterogeneity in patients&amp;rsquo; responses to treatment, designing personalised rather than &amp;ldquo;one-size-fits-all&amp;rdquo; treatment strategies is of high clinical relevance.
+In this thesis, we aim to pave the way towards a data-driven personalised management of AD severity, whereby severity data would be collected automatically from photographs without the need for patients to visit a clinic, be used to predict the evolution of AD severity, and generate personalised treatment recommendations.&lt;/p&gt;
+&lt;p&gt;First, we developed EczemaNet&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, a computer vision pipeline using convolution neural networks that detects areas of AD from photographs and then makes probabilistic assessments of AD severity.
+EczemaNet was internally validated with a medium-size dataset of images collected in a published clinical trial and demonstrated fair performance.&lt;/p&gt;
+&lt;p&gt;Then, we developed models predicting the daily to weekly evolution of AD severity&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.
+We highlighted the challenges of extracting signals from noisy severity data, with small and practically not significant effects of environmental factors&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; and biomarkers&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; on prediction.
+We showed the importance of using high-quality measurements of validated and objective (vs subjective) severity scores.
+We also stressed the importance of modelling individual severity items rather than aggregate scores, and introduced EczemaPred&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;, a principled approach to predict AD severity using Bayesian state-space models.
+Our models are flexible by design, interpretable and can quantify uncertainty in measurements, parameters and predictions.
+The models demonstrated good performance to predict the Patient-Oriented SCOring AD (PO-SCORAD).&lt;/p&gt;
+&lt;p&gt;Finally, we generated personalised treatment recommendations using Bayesian decision analysis.
+We observed that treatment effects and recommendations could be confounded by the clinical phenotype of patients.
+We also pretrained our model using historical data and combined clinical and self-assessments.&lt;/p&gt;
+&lt;p&gt;In conclusion, we have demonstrated the feasibility and the challenges of a data-driven personalised management of AD severity.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The link to my thesis will be made available soon&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1007/978-3-030-59861-7_23&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;K. Pan,  &lt;strong&gt;G. Hurault&lt;/strong&gt;, K. Arulkumaran, H. Williams and R. J. Tanaka,
+&amp;ldquo;EczemaNet: Automating Detection and Assessment of Atopic Dermatitis&amp;rdquo;,
+&lt;em&gt;International Workshop on Machine Learning in Medical Imaging&lt;/em&gt;, 2020&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1111/cea.13717&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;G. Hurault&lt;/strong&gt;, E. Domínguez-Hüttinger, S. M. Langan, H. C. Williams and R. J. Tanaka,
+&amp;ldquo;Personalised prediction of daily eczema severity scores using a mechanistic machine learning model&amp;rdquo;,
+&lt;em&gt;Clinical &amp;amp; Experimental Allergy&lt;/em&gt;, vol. 50, no. 11, pp. 1258–1266, 2020&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1002/clt2.12019&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;G. Hurault&lt;/strong&gt;, V. Delorieux, Y-M. Kim, K. Ahn, H. Williams and R. J. Tanaka,
+&amp;ldquo;Impact of environmental factors in predicting daily severity scores of atopic dermatitis&amp;rdquo;,
+&lt;em&gt;Clinical and Translational Allergy, vol. 11, no. 2&lt;/em&gt;, 2021&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1101/2020.12.02.20242404&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;G. Hurault&lt;/strong&gt;, E. Roekevisch, M.E. Schram, K. Szegedi, S. Kezic, M.A. Middelkamp-Hup, P.I. Spuls and R. J. Tanaka,
+&amp;ldquo;Can serum biomarkers predict the outcome of systemic therapy for atopic dermatitis?&amp;rdquo;,
+&lt;em&gt;MedRxiv (preprint)&lt;/em&gt;, 2020.&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1002/clt2.12140&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;G. Hurault&lt;/strong&gt;, J-F Stalder, S. Mery, A. Delarue, M. Saint Aroma, G. Josse and R. J. Tanaka,
+&amp;ldquo;EczemaPred: A computational framework for personalised prediction of eczema severity dynamics&amp;rdquo;,
+&lt;em&gt;Clinical and Translational Allergy&lt;/em&gt;, 2022, vol. 12, no. 3, p. e12140.&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>EczemaPred</title>
+      <link>https://xiangyusong.com/project/eczemapred/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://xiangyusong.com/project/eczemapred/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computational tools for data-driven personalised medicine for Atopic Dermatitis</title>
+      <link>https://xiangyusong.com/talk/computational-tools-for-data-driven-personalised-medicine-for-atopic-dermatitis/</link>
+      <pubDate>Mon, 19 Apr 2021 10:47:12 +0100</pubDate>
+      <guid>https://xiangyusong.com/talk/computational-tools-for-data-driven-personalised-medicine-for-atopic-dermatitis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Streetmaps</title>
+      <link>https://xiangyusong.com/project/streetmaps/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://xiangyusong.com/project/streetmaps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Football Prediction</title>
+      <link>https://xiangyusong.com/project/football-prediction/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://xiangyusong.com/project/football-prediction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HuraultMisc</title>
+      <link>https://xiangyusong.com/project/huraultmisc/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://xiangyusong.com/project/huraultmisc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Bayesian Hidden Markov model to predict the dynamic evolution of disease severity in eczema</title>
+      <link>https://xiangyusong.com/talk/a-bayesian-hidden-markov-model-to-predict-the-dynamic-evolution-of-disease-severity-in-eczema/</link>
+      <pubDate>Mon, 27 May 2019 12:00:00 +0100</pubDate>
+      <guid>https://xiangyusong.com/talk/a-bayesian-hidden-markov-model-to-predict-the-dynamic-evolution-of-disease-severity-in-eczema/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Calcium imaging</title>
+      <link>https://xiangyusong.com/project/calcium_imaging_app/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://xiangyusong.com/project/calcium_imaging_app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lokta-Volterra competition model in Stan</title>
+      <link>https://xiangyusong.com/project/lvc_stan/</link>
+      <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://xiangyusong.com/project/lvc_stan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regularisation</title>
+      <link>https://xiangyusong.com/project/regularisation/</link>
+      <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://xiangyusong.com/project/regularisation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bayesian Modelling to Predict the Evolution of Eczema Severity</title>
+      <link>https://xiangyusong.com/talk/bayesian-modelling-to-predict-the-evolution-of-eczema-severity/</link>
+      <pubDate>Mon, 29 Oct 2018 12:00:00 +0100</pubDate>
+      <guid>https://xiangyusong.com/talk/bayesian-modelling-to-predict-the-evolution-of-eczema-severity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bayesian Machine Learning to Predict Short-term Course of Eczema Severity</title>
+      <link>https://xiangyusong.com/talk/bayesian-machine-learning-to-predict-short-term-course-of-eczema-severity/</link>
+      <pubDate>Fri, 07 Sep 2018 12:00:00 +0100</pubDate>
+      <guid>https://xiangyusong.com/talk/bayesian-machine-learning-to-predict-short-term-course-of-eczema-severity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Predicting short- and long-term outcomes of a systemic therapy for atopic dermatitis using machine learning methods</title>
+      <link>https://xiangyusong.com/talk/predicting-short-and-long-term-outcomes-of-a-systemic-therapy-for-atopic-dermatitis-using-machine-learning-methods/</link>
+      <pubDate>Fri, 13 Apr 2018 12:00:00 +0100</pubDate>
+      <guid>https://xiangyusong.com/talk/predicting-short-and-long-term-outcomes-of-a-systemic-therapy-for-atopic-dermatitis-using-machine-learning-methods/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How can Machine Learning help our understanding of Atopic Dermatitis?</title>
+      <link>https://xiangyusong.com/talk/how-can-machine-learning-help-our-understanding-of-atopic-dermatitis/</link>
+      <pubDate>Fri, 01 Dec 2017 12:00:00 +0100</pubDate>
+      <guid>https://xiangyusong.com/talk/how-can-machine-learning-help-our-understanding-of-atopic-dermatitis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact me</title>
+      <link>https://xiangyusong.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://xiangyusong.com/contact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
