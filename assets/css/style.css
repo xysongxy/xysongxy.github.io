@@ -687,6 +687,7 @@ header .sidebar-icons {
   display: flex;
   justify-content: center;
   gap: 22px;
+  margin-bottom: 24px;
 }
 
 header .sidebar-icons a {
