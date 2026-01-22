@@ -624,5 +624,78 @@ header .site-title a {
     margin: 0 0 10px;
   }
 }
+/* ===== Sidebar customization ===== */
+header .sidebar {
+  text-align: center;
+}
+
+/* Avatar spacing */
+header .avatar {
+  display: block;
+  margin: 0 auto 24px;
+}
+
+/* CV link */
+header .sidebar-cv {
+  display: inline-block;
+  margin: 12px 0 32px;
+  font-size: 26px;
+  font-weight: 500;
+  color: #8b0000;
+}
+
+/* Section blocks (Research / Contact) */
+header .sidebar-section {
+  margin-bottom: 32px; /* space between sections */
+}
+
+/* Section titles */
+header .sidebar-title {
+  font-size: 24px;
+  font-weight: 700; /* ✅ bold */
+  margin-bottom: 14px; /* space below title */
+  color: #222;
+}
+
+/* Text under section titles */
+header .sidebar-text {
+  font-size: 18px;
+  line-height: 1.7; /* ✅ space between lines */
+  color: #333;
+}
+
+/* Contact email */
+header .sidebar-email {
+  display: inline-block;
+  font-size: 18px;
+  margin-top: 6px;
+  color: #8b0000;
+}
+
+/* Icons row */
+header .sidebar-icons {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center; /* ✅ centered */
+  gap: 22px; /* space between icons */
+}
+
+header .sidebar-icons a {
+  font-size: 28px;
+  color: #111;
+  text-decoration: none;
+}
+
+/* Hover polish */
+header .sidebar-icons a:hover {
+  color: #8b0000;
+}
+
+/* Mobile: keep everything centered and airy */
+@media screen and (max-width: 960px) {
+  header .sidebar {
+    text-align: center;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
