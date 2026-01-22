@@ -46,6 +46,17 @@ nav#navbar-main li.nav-item {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Latin Modern Roman", "FZShuSong-Z01", "Source Han Serif CN", serif;
 }
 
+footer {
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
 .highlight table td {
   padding: 5px;
 }
