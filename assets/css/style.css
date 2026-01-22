@@ -616,5 +616,34 @@ footer {
     color: #444;
   }
 }
+@media screen and (max-width: 720px) {
+  /* Make wrapper a flex column so we can reorder */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Put the main content (your H1) first */
+  section {
+    order: 1;
+    width: 100%;
+  }
+  /* Move the sidebar header below it */
+  header {
+    order: 2;
+    width: 100%;
+    padding: 0; /* override header padding-right:320px from the 960px rule */
+  }
+  /* Footer last */
+  footer {
+    order: 3;
+    width: 100%;
+    position: static;
+  }
+  /* Optional: make the name look like a title on phone */
+  section h1 {
+    margin-top: 0;
+    text-align: center;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
