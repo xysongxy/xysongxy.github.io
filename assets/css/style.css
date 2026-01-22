@@ -458,20 +458,20 @@ kbd {
 
 /* ===== Layout (theme) ===== */
 header {
-  width: 270px;
+  width: 200px;
   float: left;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 section {
-  width: 500px;
+  width: 600px;
   float: right;
   padding-bottom: 50px;
 }
 
 footer {
-  width: 270px;
+  width: 200px;
   float: left;
   position: fixed;
   bottom: 50px;
