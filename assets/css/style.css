@@ -616,32 +616,31 @@ footer {
     color: #444;
   }
 }
-@media screen and (max-width: 720px) {
-  /* Make wrapper a flex column so we can reorder */
-  .wrapper {
-    display: flex;
-    flex-direction: column;
+/* Put page content (H1 in <section>) above the logo/header on small screens */
+@media screen and (max-width: 960px) {
+  div.wrapper {
+    display: flex !important;
+    flex-direction: column !important;
   }
-  /* Put the main content (your H1) first */
-  section {
-    order: 1;
-    width: 100%;
+  /* Your H1 is inside <section> */
+  div.wrapper > section {
+    order: 1 !important;
+    width: 100% !important;
   }
-  /* Move the sidebar header below it */
-  header {
-    order: 2;
-    width: 100%;
-    padding: 0; /* override header padding-right:320px from the 960px rule */
+  /* Logo is inside <header> */
+  div.wrapper > header {
+    order: 2 !important;
+    width: 100% !important;
+    padding-right: 0 !important; /* overrides header { padding-right:320px; } */
   }
-  /* Footer last */
-  footer {
-    order: 3;
-    width: 100%;
-    position: static;
+  div.wrapper > footer {
+    order: 3 !important;
+    width: 100% !important;
+    position: static !important;
   }
-  /* Optional: make the name look like a title on phone */
-  section h1 {
-    margin-top: 0;
+  /* Optional: make your H1 look nice on phone */
+  div.wrapper > section h1 {
+    margin-top: 0.25rem !important;
     text-align: center;
   }
 }
