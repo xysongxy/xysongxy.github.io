@@ -703,4 +703,49 @@ header .sidebar-icons svg {
   display: block;
 }
 
+/* =========================================================
+   MOBILE TITLE + HEADER ORDER (FINAL FIX)
+   ========================================================= */
+/* 1. NEVER show mobile title on desktop */
+.mobile-title {
+  display: none !important;
+}
+
+/* 2. Mobile layout fix */
+@media screen and (max-width: 720px) {
+  /* Make header a vertical flex container */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Show title on mobile */
+  .mobile-title {
+    display: block !important;
+    order: 1; /* ABOVE avatar */
+    font-size: 32px; /* bigger */
+    font-weight: 700;
+    text-align: center;
+    color: #222;
+    margin: 0 0 14px;
+  }
+  /* Avatar comes after title */
+  header .avatar {
+    order: 2;
+    margin: 0 0 24px;
+  }
+  /* Sidebar content below avatar */
+  header .sidebar {
+    order: 3;
+    text-align: center;
+  }
+}
+/* 3. Hide main content H1 on mobile */
+@media screen and (max-width: 720px) {
+  section h1,
+  section > h1:first-child {
+    display: none !important;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
