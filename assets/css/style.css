@@ -1,31 +1,51 @@
+@charset "UTF-8";
 @font-face {
-  font-family: "Noto Sans";
-  font-weight: 400;
-  font-style: normal;
-  src: url("../fonts/Noto-Sans-regular/Noto-Sans-regular.eot");
-  src: url("../fonts/Noto-Sans-regular/Noto-Sans-regular.eot?#iefix") format("embedded-opentype"), local("Noto Sans"), local("Noto-Sans-regular"), url("../fonts/Noto-Sans-regular/Noto-Sans-regular.woff2") format("woff2"), url("../fonts/Noto-Sans-regular/Noto-Sans-regular.woff") format("woff"), url("../fonts/Noto-Sans-regular/Noto-Sans-regular.ttf") format("truetype"), url("../fonts/Noto-Sans-regular/Noto-Sans-regular.svg#NotoSans") format("svg");
+  font-family: "FZShuSong-Z01";
+  src: local("FZShuSong-Z01") local("Songti Sc"), url("/fonts/FZSSK.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Noto Sans";
-  font-weight: 700;
-  font-style: normal;
-  src: url("../fonts/Noto-Sans-700/Noto-Sans-700.eot");
-  src: url("../fonts/Noto-Sans-700/Noto-Sans-700.eot?#iefix") format("embedded-opentype"), local("Noto Sans Bold"), local("Noto-Sans-700"), url("../fonts/Noto-Sans-700/Noto-Sans-700.woff2") format("woff2"), url("../fonts/Noto-Sans-700/Noto-Sans-700.woff") format("woff"), url("../fonts/Noto-Sans-700/Noto-Sans-700.ttf") format("truetype"), url("../fonts/Noto-Sans-700/Noto-Sans-700.svg#NotoSans") format("svg");
+  font-family: "FZKai-Z03";
+  src: local("FZKai-Z03") local("Kaiti SC"), url("/fonts/FZKTK.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Noto Sans";
-  font-weight: 400;
-  font-style: italic;
-  src: url("../fonts/Noto-Sans-italic/Noto-Sans-italic.eot");
-  src: url("../fonts/Noto-Sans-italic/Noto-Sans-italic.eot?#iefix") format("embedded-opentype"), local("Noto Sans Italic"), local("Noto-Sans-italic"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.woff2") format("woff2"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.woff") format("woff"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.ttf") format("truetype"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.svg#NotoSans") format("svg");
+  font-family: "Source Han Serif CN";
+  src: local("Source Han Serif CN"), local("Source Han Serif SC"), local("Source Han Serif TC"), local("Source Han Serif TW"), local("Source Han Serif"), local("Noto Serif CJK SC"), local("Songti SC"), local("SimSong"), url("/fonts/SourceHanSerifCN-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Noto Sans";
-  font-weight: 700;
-  font-style: italic;
-  src: url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot");
-  src: url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot?#iefix") format("embedded-opentype"), local("Noto Sans Bold Italic"), local("Noto-Sans-700italic"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff2") format("woff2"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff") format("woff"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.ttf") format("truetype"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.svg#NotoSans") format("svg");
+  font-family: "FandolKai";
+  src: local("Kaiti"), local("Kaiti SC"), local("STKaiti"), local("楷体"), local("SimKai"), local("AR PL KaitiM GB"), local("DFKai-SB"), local("FandolKai"), url("/fonts/AR-PL-KaitiM-GB.woff2") format("woff2");
 }
+body {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Latin Modern Roman", "FZShuSong-Z01", "Source Han Serif CN", serif;
+}
+
+.home blockquote, .cn blockquote, .kai, .cn em, .cn .side, .hash-note, .hide-notes .toggle-notes {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, "FZKai-Z03", FandolKai, serif;
+}
+
+.title {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Latin Modern Roman", "FZShuSong-Z01", "Source Han Serif CN", serif;
+}
+
+code {
+  font-family: Consolas, Courier, "Courier New", "FZKai-Z03", FandolKai, monospace;
+}
+
+pre, code {
+  font-size: 0.95em;
+}
+
+h1, h2, h3 {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Latin Modern Roman", "FZShuSong-Z01", "Source Han Serif CN", serif;
+}
+
+.dropdown-menu,
+nav#navbar-main li.nav-item {
+  /*font-size: 16px;*/
+  /*font-weight: bold;*/
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Latin Modern Roman", "FZShuSong-Z01", "Source Han Serif CN", serif;
+}
+
 .highlight table td {
   padding: 5px;
 }
