@@ -2,43 +2,44 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Xiangyu Song</title>
-
     <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Xiangyu Song</title>
   </head>
 
   <body>
     <div class="wrapper">
       <header>
         
-          <img src="/assets/img/avatar.JPG" alt="avatar" />
+          <img class="avatar" src="/assets/img/avatar.JPG" alt="avatar">
         
 
-        <!-- ✅ Add this block (below avatar) -->
-        <div class="sidebar-block">
-          <a class="sidebar-link" href="/cv/">Curriculum Vitae</a>
+        <!-- ⭐ This is the part you add (below avatar) -->
+        <div class="sidebar">
+          <a class="sidebar-cv" href="/cv/">Curriculum Vitae</a>
 
-          <h2>Research Interest</h2>
-          <p>Causal Inference<br>Political Methodology</p>
+          <div class="sidebar-section">
+            <div class="sidebar-title">Research Interest</div>
+            <div class="sidebar-text">
+              Causal Inference<br>
+              Political Methodology
+            </div>
+          </div>
 
-          <h2>Contact Information</h2>
-          <p><a class="sidebar-email" href="mailto:YOUR_EMAIL">YOUR_EMAIL</a></p>
+          <div class="sidebar-section">
+            <div class="sidebar-title">Contact Information</div>
+            <a class="sidebar-email" href="mailto:YOUR_EMAIL">YOUR_EMAIL</a>
+          </div>
 
           <div class="sidebar-icons">
-            <a href="YOUR_GOOGLE_SCHOLAR_URL" aria-label="Google Scholar">
-              <!-- simple "g" mark placeholder; replace with your svg if you want -->
-              <span class="icon-text">g</span>
-            </a>
+            <a href="YOUR_SCHOLAR_URL" aria-label="Google Scholar">g</a>
             <a href="YOUR_GITHUB_URL" aria-label="GitHub">
-              <span class="icon-text">⌂</span>
+              <!-- simple GitHub mark; replace later if you want -->
+              <span>⌂</span>
             </a>
           </div>
         </div>
-        <!-- ✅ end block -->
-
+        <!-- ⭐ end -->
       </header>
 
       <section>
