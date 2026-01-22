@@ -325,7 +325,7 @@ nav#navbar-main li.nav-item {
 body {
   background-color: #fff;
   padding: 50px;
-  font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px/1.5 Palatino, "Palatino Linotype", "Palatino LT STD", "Latin Modern Roman", "FZShuSong-Z01", "Source Han Serif CN", serif;
   color: #727272;
   font-weight: 400;
 }
