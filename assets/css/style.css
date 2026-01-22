@@ -748,26 +748,47 @@ header .sidebar-icons svg {
   }
 }
 /* =========================================================
-   Sidebar background shading
+   Sidebar shaded card (does NOT cover footer)
    ========================================================= */
-/* Desktop */
-header {
-  background-color: #7e7f81; /* light gray */
-  padding: 30px 20px;
-  border-radius: 6px;
+/* Create a shaded card inside the header */
+header .avatar,
+header .mobile-title,
+header .sidebar {
+  background-color: #b9b9b9;
 }
 
-/* Make sure text still looks clean */
-header * {
-  box-sizing: border-box;
+/* Wrap spacing visually by grouping */
+header {
+  background: none; /* important: header itself is NOT shaded */
+}
+
+/* Card-style container */
+header .mobile-title {
+  padding: 18px 12px 10px;
+  border-radius: 6px 6px 0 0;
+}
+
+header .avatar {
+  padding: 10px 12px 18px;
+}
+
+header .sidebar {
+  padding: 0 12px 24px;
+  border-radius: 0 0 6px 6px;
+}
+
+/* Keep everything centered */
+header .sidebar,
+header .mobile-title {
+  text-align: center;
 }
 
 /* Mobile: full-width shaded block */
 @media screen and (max-width: 960px) {
-  header {
-    background-color: #7e7f81;
-    padding: 24px 16px;
-    border-radius: 0; /* full-width looks better on mobile */
+  header .mobile-title,
+  header .avatar,
+  header .sidebar {
+    border-radius: 0;
   }
 }
 
