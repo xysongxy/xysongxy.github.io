@@ -548,8 +548,12 @@ footer {
 }
 
 @media (max-width: 600px) {
-  h1 {
+  .page-content h1,
+  main h1,
+  section h1 {
+    display: block;
     margin-top: 0;
+    padding-top: 0;
   }
 }
 @media print, screen and (max-width: 960px) {
