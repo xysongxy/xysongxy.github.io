@@ -752,7 +752,7 @@ header .sidebar-icons svg {
    ========================================================= */
 /* Desktop */
 header {
-  background-color: #d8dee9; /* light gray */
+  background-color: #7e7f81; /* light gray */
   padding: 30px 20px;
   border-radius: 6px;
 }
@@ -765,7 +765,7 @@ header * {
 /* Mobile: full-width shaded block */
 @media screen and (max-width: 960px) {
   header {
-    background-color: #d8dee9;
+    background-color: #7e7f81;
     padding: 24px 16px;
     border-radius: 0; /* full-width looks better on mobile */
   }
