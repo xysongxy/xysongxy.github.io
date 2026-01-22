@@ -609,7 +609,9 @@ footer {
 }
 /* Hide site title on desktop */
 header h1,
-header h1 a {
+header h1 a,
+header .site-title,
+header .site-title a {
   display: none;
 }
 
