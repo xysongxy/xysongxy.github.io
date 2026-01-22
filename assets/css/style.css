@@ -547,15 +547,6 @@ footer {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-@media (max-width: 600px) {
-  .page-content h1,
-  main h1,
-  section h1 {
-    display: block;
-    margin-top: 0;
-    padding-top: 0;
-  }
-}
 @media print, screen and (max-width: 960px) {
   div.wrapper {
     width: auto;
@@ -616,32 +607,19 @@ footer {
     color: #444;
   }
 }
-/* Put page content (H1 in <section>) above the logo/header on small screens */
-@media screen and (max-width: 960px) {
-  div.wrapper {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-  /* Your H1 is inside <section> */
-  div.wrapper > section {
-    order: 1 !important;
-    width: 100% !important;
-  }
-  /* Logo is inside <header> */
-  div.wrapper > header {
-    order: 2 !important;
-    width: 100% !important;
-    padding-right: 0 !important; /* overrides header { padding-right:320px; } */
-  }
-  div.wrapper > footer {
-    order: 3 !important;
-    width: 100% !important;
-    position: static !important;
-  }
-  /* Optional: make your H1 look nice on phone */
-  div.wrapper > section h1 {
-    margin-top: 0.25rem !important;
+/* Hide site title on desktop */
+header h1,
+header h1 a {
+  display: none;
+}
+
+/* Show it on mobile */
+@media screen and (max-width: 720px) {
+  header h1,
+  header h1 a {
+    display: block;
     text-align: center;
+    margin: 0 0 10px;
   }
 }
 
