@@ -57,6 +57,11 @@ footer p {
   margin: 0.5rem 0;
 }
 
+@media (max-width: 600px) {
+  footer {
+    text-align: center;
+  }
+}
 .highlight table td {
   padding: 5px;
 }
