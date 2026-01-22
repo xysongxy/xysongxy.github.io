@@ -394,7 +394,7 @@ a:hover small {
 }
 
 .wrapper {
-  width: 860px;
+  width: 1000px;
   margin: 0 auto;
 }
 
@@ -465,7 +465,7 @@ header {
 }
 
 section {
-  width: 600px;
+  width: 750px;
   float: right;
   padding-bottom: 50px;
 }
