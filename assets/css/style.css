@@ -607,21 +607,30 @@ footer {
     color: #444;
   }
 }
-/* Hide site title on desktop */
-header h1,
-header h1 a,
-header .site-title,
-header .site-title a {
-  display: none;
+/* Hide site title in the left header on desktop */
+@media screen and (min-width: 721px) {
+  header h1,
+  header h1 a,
+  header .site-title,
+  header .site-title a {
+    display: none !important;
+  }
 }
-
-/* Show it on mobile */
+/* Show site title on mobile */
 @media screen and (max-width: 720px) {
   header h1,
-  header h1 a {
-    display: block;
+  header h1 a,
+  header .site-title,
+  header .site-title a {
+    display: block !important;
     text-align: center;
-    margin: 0 0 10px;
+    margin: 0 0 14px !important;
+  }
+}
+/* Hide the H1 in the main content area on mobile */
+@media screen and (max-width: 720px) {
+  section h1 {
+    display: none !important;
   }
 }
 /* ===== Sidebar customization ===== */
