@@ -338,6 +338,7 @@ footer p {
   background-color: #f8f8f8;
 }
 
+/* ===== Base ===== */
 body {
   background-color: #fff;
   padding: 50px;
@@ -455,6 +456,7 @@ kbd {
   vertical-align: middle;
 }
 
+/* ===== Layout (theme) ===== */
 header {
   width: 270px;
   float: left;
@@ -462,6 +464,32 @@ header {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
+section {
+  width: 500px;
+  float: right;
+  padding-bottom: 50px;
+}
+
+footer {
+  width: 270px;
+  float: left;
+  position: fixed;
+  bottom: 50px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+small {
+  font-size: 11px;
+}
+
+hr {
+  border: 0;
+  background: #e5e5e5;
+  height: 1px;
+  margin: 0 0 20px;
+}
+
+/* Downloads bar (kept from theme even if unused) */
 ul.downloads {
   list-style: none;
   height: 40px;
@@ -522,31 +550,7 @@ strong {
   color: #222;
 }
 
-section {
-  width: 500px;
-  float: right;
-  padding-bottom: 50px;
-}
-
-small {
-  font-size: 11px;
-}
-
-hr {
-  border: 0;
-  background: #e5e5e5;
-  height: 1px;
-  margin: 0 0 20px;
-}
-
-footer {
-  width: 270px;
-  float: left;
-  position: fixed;
-  bottom: 50px;
-  -webkit-font-smoothing: subpixel-antialiased;
-}
-
+/* ===== Responsive (theme) ===== */
 @media print, screen and (max-width: 960px) {
   div.wrapper {
     width: auto;
@@ -607,44 +611,44 @@ footer {
     color: #444;
   }
 }
-/* Hide site title in the left header on desktop */
-@media screen and (min-width: 721px) {
-  header h1,
-  header h1 a,
-  header .site-title,
-  header .site-title a {
-    display: none !important;
-  }
+/* =========================================================
+   Custom: mobile title + hide main H1 on mobile
+   ========================================================= */
+/* Hidden by default (desktop/tablet) */
+.mobile-title {
+  display: none;
 }
-/* Show site title on mobile */
+
+/* Show site title at top on mobile */
 @media screen and (max-width: 720px) {
-  header h1,
-  header h1 a,
-  header .site-title,
-  header .site-title a {
-    display: block !important;
+  .mobile-title {
+    display: block;
     text-align: center;
-    margin: 0 0 14px !important;
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+    margin: 10px 0 16px;
   }
 }
-/* Hide the H1 in the main content area on mobile */
+/* Hide the main content H1 on mobile */
 @media screen and (max-width: 720px) {
-  section h1 {
+  section h1,
+  section > h1:first-child {
     display: none !important;
   }
 }
-/* ===== Sidebar customization ===== */
+/* =========================================================
+   Custom: sidebar styling (centered, bold headings, spaced)
+   ========================================================= */
 header .sidebar {
   text-align: center;
 }
 
-/* Avatar spacing */
 header .avatar {
   display: block;
   margin: 0 auto 24px;
 }
 
-/* CV link */
 header .sidebar-cv {
   display: inline-block;
   margin: 12px 0 32px;
@@ -653,58 +657,50 @@ header .sidebar-cv {
   color: #8b0000;
 }
 
-/* Section blocks (Research / Contact) */
 header .sidebar-section {
-  margin-bottom: 32px; /* space between sections */
+  margin-bottom: 34px;
 }
 
-/* Section titles */
 header .sidebar-title {
   font-size: 24px;
-  font-weight: 700; /* ✅ bold */
-  margin-bottom: 14px; /* space below title */
+  font-weight: 700;
+  margin-bottom: 14px;
   color: #222;
 }
 
-/* Text under section titles */
 header .sidebar-text {
   font-size: 18px;
-  line-height: 1.7; /* ✅ space between lines */
+  line-height: 1.9;
   color: #333;
 }
 
-/* Contact email */
 header .sidebar-email {
   display: inline-block;
   font-size: 18px;
   margin-top: 6px;
   color: #8b0000;
+  text-decoration: none;
 }
 
-/* Icons row */
 header .sidebar-icons {
   margin-top: 24px;
   display: flex;
-  justify-content: center; /* ✅ centered */
-  gap: 22px; /* space between icons */
+  justify-content: center;
+  gap: 22px;
 }
 
 header .sidebar-icons a {
-  font-size: 28px;
   color: #111;
   text-decoration: none;
 }
 
-/* Hover polish */
 header .sidebar-icons a:hover {
   color: #8b0000;
 }
 
-/* Mobile: keep everything centered and airy */
-@media screen and (max-width: 960px) {
-  header .sidebar {
-    text-align: center;
-  }
+/* Optional: slightly larger icons */
+header .sidebar-icons svg {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
