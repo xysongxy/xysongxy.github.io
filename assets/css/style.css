@@ -747,5 +747,28 @@ header .sidebar-icons svg {
     display: none !important;
   }
 }
+/* =========================================================
+   Sidebar background shading
+   ========================================================= */
+/* Desktop */
+header {
+  background-color: #f5f5f5; /* light gray */
+  padding: 30px 20px;
+  border-radius: 6px;
+}
+
+/* Make sure text still looks clean */
+header * {
+  box-sizing: border-box;
+}
+
+/* Mobile: full-width shaded block */
+@media screen and (max-width: 960px) {
+  header {
+    background-color: #f5f5f5;
+    padding: 24px 16px;
+    border-radius: 0; /* full-width looks better on mobile */
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
