@@ -794,5 +794,20 @@ header .sidebar-icons svg {
     padding-bottom: 50px;
   }
 }
+/* =========================================================
+   Phone LANDSCAPE: two-column, but footer must NOT overlap sidebar
+   ========================================================= */
+@media screen and (orientation: landscape) and (max-width: 900px) {
+  /* keep two-column; just fix the footer behavior */
+  footer {
+    position: static !important; /* <-- key: stop overlapping */
+    float: none !important;
+    width: auto !important;
+    bottom: auto !important;
+    /* place footer under the main column (same left offset as section) */
+    margin-left: calc(clamp(220px, 28vw, 260px) + 40px);
+    margin-top: 24px !important;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
