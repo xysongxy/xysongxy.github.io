@@ -344,7 +344,7 @@ footer p {
 body {
   background-color: #fff;
   padding: 50px;
-  font: 14px/1.5 Palatino, "Palatino Linotype", "Palatino LT STD", "Latin Modern Roman", "FZShuSong-Z01", "Source Han Serif CN", serif;
+  font: 16px/1.5 Palatino, "Palatino Linotype", "Palatino LT STD", "Latin Modern Roman", "FZShuSong-Z01", "Source Han Serif CN", serif;
   color: #000000;
   font-weight: 400;
 }
@@ -459,6 +459,11 @@ small {
 strong {
   color: #222;
   font-weight: 700;
+}
+
+section ul {
+  padding-left: 1.2em;
+  margin-left: 0;
 }
 
 /* =========================================================
