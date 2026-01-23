@@ -537,6 +537,11 @@ header .sidebar-cv {
   color: #800000;
 }
 
+header .sidebar-cv a:hover, a:focus {
+  color: #800000;
+  font-weight: bold;
+}
+
 header .sidebar-section {
   margin-bottom: 34px;
 }
