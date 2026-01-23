@@ -646,10 +646,10 @@ header .sidebar-icons svg {
    ========================================================= */
 @media screen and (orientation: landscape) and (max-width: 900px) {
   footer {
-    position: sticky !important;
+    position: fixed !important;
     float: left !important;
     width: auto !important;
-    bottom: auto !important;
+    bottom: 20px !important;
   }
 }
 
