@@ -620,7 +620,7 @@ strong {
 }
 
 /* Show site title at top on mobile */
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 720px) {
   .mobile-title {
     display: block;
     text-align: center;
@@ -745,41 +745,6 @@ header .sidebar-icons svg {
 @media screen and (max-width: 720px) {
   section h1,
   section > h1:first-child {
-    display: none !important;
-  }
-}
-/* =========================================================
-   Phone landscape: force "laptop" two-column layout
-   ========================================================= */
-@media screen and (orientation: landscape) and (max-width: 960px) and (min-width: 640px) {
-  /* restore desktop wrapper width */
-  .wrapper, div.wrapper {
-    width: 1000px !important;
-    margin: 0 auto !important;
-  }
-  /* restore desktop sidebar + content columns */
-  header {
-    position: fixed !important;
-    float: left !important;
-    width: 250px !important;
-    top: 0 !important;
-    display: block !important; /* undo mobile flex */
-  }
-  footer {
-    position: fixed !important;
-    float: left !important;
-    width: 250px !important;
-    bottom: 50px !important;
-  }
-  section {
-    float: right !important;
-    width: 650px !important;
-    border: 0 !important; /* undo mobile border */
-    padding: 0 !important; /* undo mobile padding */
-    margin: 0 !important; /* undo mobile margin */
-  }
-  /* hide the mobile-only title in landscape "desktop mode" */
-  .mobile-title {
     display: none !important;
   }
 }
