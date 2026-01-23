@@ -537,8 +537,8 @@ header .sidebar-cv {
   color: #800000;
 }
 
-header .sidebar-cv a:hover,
-header .sidebar-cv a:focus {
+header a.sidebar-cv:hover,
+header a.sidebar-cv:focus {
   color: #800000;
   font-weight: bold;
 }
