@@ -645,12 +645,12 @@ header .sidebar-icons svg {
    overlap sidebar content (so make footer flow below content)
    ========================================================= */
 @media screen and (orientation: landscape) and (max-width: 900px) {
+  /* keep footer in the LEFT column like laptop */
   footer {
-    position: static !important;
-    float: none !important;
-    width: auto !important;
-    bottom: auto !important;
-    /* align footer under the main column */
+    position: fixed !important;
+    float: left !important;
+    bottom: 12px !important; /* a little closer to bottom */
+    width: clamp(220px, 28vw, 260px) !important;
   }
 }
 
