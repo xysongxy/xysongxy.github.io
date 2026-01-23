@@ -653,9 +653,6 @@ header .sidebar-icons svg {
     overflow-y: auto !important;
     padding-bottom: 70px !important;
   }
-  section {
-    margin-left: calc(clamp(220px, 28vw, 260px) + 40px) !important;
-  }
   footer {
     position: static !important;
     float: none !important;
