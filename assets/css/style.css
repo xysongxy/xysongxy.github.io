@@ -394,7 +394,8 @@ a:hover small {
 }
 
 .wrapper {
-  width: 1000px;
+  /* Responsive width: adapts to device size, caps at a nice "laptop" width */
+  width: min(1100px, 94vw);
   margin: 0 auto;
 }
 
@@ -456,7 +457,7 @@ kbd {
   vertical-align: middle;
 }
 
-/* ===== Layout (theme) ===== */
+/* ===== Layout (theme defaults, will be overridden by ORIENTATION rules) ===== */
 header {
   width: 250px;
   float: left;
@@ -550,93 +551,6 @@ strong {
   color: #222;
 }
 
-/* ===== Responsive (theme) ===== */
-@media print, screen and (max-width: 960px) {
-  div.wrapper {
-    width: auto;
-    margin: 0;
-  }
-  header, section, footer {
-    float: none;
-    position: static;
-    width: auto;
-  }
-  header {
-    padding-right: 320px;
-  }
-  section {
-    border: 1px solid #e5e5e5;
-    border-width: 1px 0;
-    padding: 20px 0;
-    margin: 0 0 20px;
-  }
-  header a small {
-    display: inline;
-  }
-  header ul {
-    position: absolute;
-    right: 50px;
-    top: 52px;
-  }
-}
-@media print, screen and (max-width: 720px) {
-  body {
-    word-wrap: break-word;
-  }
-  header {
-    padding: 0;
-  }
-  header ul, header p.view {
-    position: static;
-  }
-  pre, code {
-    word-wrap: normal;
-  }
-}
-@media print, screen and (max-width: 480px) {
-  body {
-    padding: 15px;
-  }
-  .downloads {
-    width: 99%;
-  }
-  .downloads li, .downloads li + li + li {
-    width: 33%;
-  }
-}
-@media print {
-  body {
-    padding: 0.4in;
-    font-size: 12pt;
-    color: #444;
-  }
-}
-/* =========================================================
-   Custom: mobile title + hide main H1 on mobile
-   ========================================================= */
-/* Hidden by default (desktop/tablet) */
-.mobile-title {
-  display: none;
-}
-
-/* Show site title at top on mobile */
-@media screen and (max-width: 960px) {
-  .mobile-title {
-    display: block;
-    text-align: center;
-    font-size: 28px;
-    font-weight: 700;
-    color: #222;
-    margin: 10px 0 16px;
-  }
-}
-/* Hide the main content H1 on mobile */
-@media screen and (max-width: 720px) {
-  section h1,
-  section > h1:first-child {
-    display: none !important;
-  }
-}
 /* =========================================================
    Custom: sidebar styling (centered, bold headings, spaced)
    ========================================================= */
@@ -699,107 +613,114 @@ header .sidebar-icons a:hover {
   color: #8b0000;
 }
 
-/* Optional: slightly larger icons */
 header .sidebar-icons svg {
   display: block;
 }
 
 /* =========================================================
-   MOBILE TITLE + HEADER ORDER (FINAL FIX)
+   Site title + section H1 behavior (as discussed)
+   - .mobile-title shown only in portrait (stacked)
+   - section h1 hidden in portrait (stacked)
+   - section h1 centered otherwise
    ========================================================= */
-/* 1. NEVER show mobile title on desktop */
 .mobile-title {
-  display: none !important;
+  display: none;
 }
 
-/* 2. Mobile layout fix */
-@media screen and (max-width: 1024px) {
-  /* Make header a vertical flex container */
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  /* Show title on mobile */
-  .mobile-title {
-    display: block !important;
-    order: 1; /* ABOVE avatar */
-    font-size: 32px; /* bigger */
-    font-weight: 700;
-    text-align: center;
-    color: #222;
-    margin: 0 0 14px;
-  }
-  /* Avatar comes after title */
-  header .avatar {
-    order: 2;
-    margin: 0 0 24px;
-  }
-  /* Sidebar content below avatar */
-  header .sidebar {
-    order: 3;
-    text-align: center;
-  }
+section h1 {
+  text-align: center;
 }
-/* 3. Hide main content H1 on mobile */
-@media screen and (max-width: 1024px) {
-  section h1,
-  section > h1:first-child {
-    display: none !important;
-  }
-}
+
 /* =========================================================
-   FINAL RESPONSIVE POLICY
-   - Portrait (<=1024): mobile/stacked (includes iPad portrait + phones)
-   - Landscape phones: laptop/two-column
-   - Landscape iPad: naturally laptop already
+   ORIENTATION-BASED GENERAL RULES (FINAL)
+   1) Landscape: always laptop layout (two-column)
+   2) Portrait: always phone layout (stacked)
+   3) Proportional sizing via vw/min()/clamp()
    ========================================================= */
-/* 1) Portrait phones + tablets => MOBILE (stacked) */
-@media screen and (orientation: portrait) and (max-width: 1024px) {
+/* -------- PORTRAIT (vertical): PHONE layout (stacked) -------- */
+@media screen and (orientation: portrait) {
+  /* Make padding proportional so it looks right on phones & iPads */
+  body {
+    padding: clamp(12px, 4vw, 50px);
+  }
   .wrapper, div.wrapper {
-    width: auto !important;
-    margin: 0 !important;
+    width: min(92vw, 700px);
+    margin: 0 auto;
   }
   header, section, footer {
     float: none !important;
     position: static !important;
     width: auto !important;
   }
+  /* Header becomes a stacked block with title above avatar */
+  header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .mobile-title {
+    display: block !important;
+    order: 1 !important;
+    text-align: center !important;
+    font-size: clamp(24px, 5vw, 34px) !important;
+    font-weight: 700 !important;
+    color: #222 !important;
+    margin: 6px 0 14px !important;
+  }
+  header .avatar {
+    order: 2 !important;
+    margin: 0 0 20px !important;
+  }
+  header .sidebar {
+    order: 3 !important;
+    text-align: center !important;
+  }
+  /* Section styled like "mobile stacked" */
   section {
     border: 1px solid #e5e5e5 !important;
     border-width: 1px 0 !important;
-    padding: 20px 0 !important;
-    margin: 0 0 20px !important;
+    padding: 18px 0 !important;
+    margin: 0 0 18px !important;
+    width: auto !important;
+    float: none !important;
   }
-  /* show title block in mobile/stacked mode */
-  .mobile-title {
-    display: block !important;
-    text-align: center !important;
+  /* Hide the main content H1 in stacked portrait layout */
+  section h1,
+  section > h1:first-child {
+    display: none !important;
+  }
+  /* Footer should flow normally */
+  footer {
+    margin-top: 18px !important;
   }
 }
-/* 2) LANDSCAPE PHONES => LAPTOP (two-column) */
-@media screen and (orientation: landscape) and (max-width: 960px) and (min-width: 640px) {
-  /* restore desktop wrapper width */
-  .wrapper, div.wrapper {
-    width: 1000px !important;
-    margin: 0 auto !important;
+/* -------- LANDSCAPE (horizontal): LAPTOP layout (two-column) -------- */
+@media screen and (orientation: landscape) {
+  /* Keep some padding but proportional on small devices */
+  body {
+    padding: clamp(12px, 3vw, 50px);
   }
-  /* restore desktop columns */
+  .wrapper, div.wrapper {
+    width: min(1100px, 94vw);
+    margin: 0 auto;
+  }
+  /* Two-column layout, proportional widths */
   header {
     position: fixed !important;
     float: left !important;
-    width: 250px !important;
     top: 0 !important;
-    display: block !important; /* undo any mobile flex */
+    width: clamp(220px, 26vw, 280px) !important;
+    display: block !important; /* undo portrait flex */
   }
   section {
     float: right !important;
-    width: 650px !important;
+    width: calc(100% - clamp(220px, 26vw, 280px) - 40px) !important;
     border: 0 !important;
-    padding: 0 !important;
     margin: 0 !important;
+    padding: 0 !important;
+    padding-bottom: 50px !important;
   }
-  /* IMPORTANT: don't let footer overlay the text while scrolling */
+  /* Prevent overlay while scrolling: do not fix footer in landscape */
   footer {
     position: static !important;
     float: none !important;
@@ -807,13 +728,10 @@ header .sidebar-icons svg {
     bottom: auto !important;
     margin-top: 24px !important;
   }
-  /* hide mobile title in landscape laptop-mode */
+  /* Hide mobile title in landscape laptop layout */
   .mobile-title {
     display: none !important;
   }
-}
-section h1 {
-  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
