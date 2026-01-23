@@ -645,19 +645,25 @@ header .sidebar-icons svg {
    overlap sidebar content (so make footer flow below content)
    ========================================================= */
 @media screen and (orientation: landscape) and (max-width: 900px) {
+  /* Left column becomes a full-height scrolling panel */
   header {
     position: fixed !important;
     top: 0 !important;
-    bottom: 0 !important; /* make the left panel full height */
+    bottom: 0 !important;
+    left: 0 !important;
     width: clamp(220px, 28vw, 260px) !important;
-    overflow-y: auto !important; /* scroll sidebar if it’s tall */
-    padding-bottom: 70px !important; /* reserve space for footer */
+    overflow-y: auto !important;
+    padding-bottom: 16px !important;
   }
+  /* Footer lives INSIDE the left panel and stays separated */
   footer {
-    position: fixed !important;
-    left: auto !important; /* keep normal left positioning */
+    position: sticky !important; /* key */
+    top: calc(100vh - 60px) !important; /* push it toward bottom of the panel */
     bottom: 12px !important;
-    width: clamp(220px, 28vw, 260px) !important;
+    float: none !important;
+    width: 100% !important;
+    margin-top: 18px !important; /* fixed distance from end of header content */
+    padding-top: 10px;
   }
 }
 
