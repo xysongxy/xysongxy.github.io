@@ -647,20 +647,22 @@ header .sidebar-icons svg {
 @media screen and (orientation: landscape) and (max-width: 900px) {
   header {
     position: fixed !important;
-    top: 1px !important;
-    bottom: 0 !important; /* make the left panel full height */
+    top: 1rem !important; /* ✅ space from top */
+    bottom: 0 !important;
     width: clamp(220px, 28vw, 260px) !important;
-    overflow-y: auto !important; /* scroll sidebar if it’s tall */
-    padding-bottom: 70px !important; /* reserve space for footer */
+    overflow-y: auto !important;
+    padding-bottom: 70px !important;
+  }
+  section {
+    margin-left: calc(clamp(220px, 28vw, 260px) + 40px) !important;
   }
   footer {
     position: static !important;
     float: none !important;
     width: auto !important;
-    bottom: auto !important;
     margin-left: calc(clamp(220px, 28vw, 260px) + 40px);
     margin-top: 24px !important;
-    font-size: 3px !important; /* ✅ footer text size */
+    font-size: 6px !important;
   }
 }
 
