@@ -647,7 +647,7 @@ header .sidebar-icons svg {
 @media screen and (orientation: landscape) and (max-width: 900px) {
   header {
     position: fixed !important;
-    top: 0 !important;
+    top: 1px !important;
     bottom: 0 !important; /* make the left panel full height */
     width: clamp(220px, 28vw, 260px) !important;
     overflow-y: auto !important; /* scroll sidebar if it’s tall */
@@ -660,7 +660,7 @@ header .sidebar-icons svg {
     bottom: auto !important;
     margin-left: calc(clamp(220px, 28vw, 260px) + 40px);
     margin-top: 24px !important;
-    font-size: 9.6px !important; /* ✅ footer text size */
+    font-size: 3px !important; /* ✅ footer text size */
   }
 }
 
