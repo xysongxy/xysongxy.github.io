@@ -537,7 +537,8 @@ header .sidebar-cv {
   color: #800000;
 }
 
-header .sidebar-cv a:hover, a:focus {
+header .sidebar-cv a:hover,
+header .sidebar-cv a:focus {
   color: #800000;
   font-weight: bold;
 }
@@ -559,7 +560,8 @@ header .sidebar-text {
   color: #000000;
 }
 
-header .sidebar-text a:hover, a:focus {
+header .sidebar-text a:hover,
+header .sidebar-text a:focus {
   color: #800000;
   font-weight: bold;
 }
