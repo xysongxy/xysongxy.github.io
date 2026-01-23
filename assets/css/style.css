@@ -651,8 +651,6 @@ header .sidebar-icons svg {
     width: auto !important;
     bottom: auto !important;
     /* align footer under the main column */
-    margin-left: calc(clamp(220px, 28vw, 260px) + 40px);
-    margin-top: 24px !important;
   }
 }
 
