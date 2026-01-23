@@ -696,8 +696,9 @@ header .sidebar-icons svg {
    Portrait  => stacked phone layout
    ========================================================= */
 /* ---------- PORTRAIT (vertical): STACKED layout ---------- */
-@media screen and (orientation: portrait) {
-  /* Make padding scale nicely across phones/iPads */
+/* ---------- PORTRAIT (vertical): STACKED layout (PHONES ONLY) ---------- */
+@media screen and (orientation: portrait) and (max-width: 767px) {
+  /* Make padding scale nicely across phones */
   body {
     padding: clamp(12px, 4vw, 50px);
   }
@@ -740,18 +741,18 @@ header .sidebar-icons svg {
     padding: 18px 0 !important;
     margin: 0 0 18px !important;
   }
-  /* (same as your mobile behavior) hide section H1 in portrait */
+  /* hide section H1 in phone portrait stacked mode */
   section h1,
   section > h1:first-child {
     display: none !important;
   }
-  /* Footer flows normally (no overlay) */
   footer {
     margin-top: 18px !important;
   }
 }
 /* ---------- LANDSCAPE (horizontal): TWO-COLUMN layout ---------- */
-@media screen and (orientation: landscape) {
+/* ---------- TWO-COLUMN layout: LANDSCAPE OR TABLET PORTRAIT ---------- */
+@media screen and (orientation: landscape), screen and (orientation: portrait) and (min-width: 768px) {
   body {
     padding: clamp(12px, 3vw, 50px);
   }
@@ -759,13 +760,12 @@ header .sidebar-icons svg {
     width: min(1100px, 94vw);
     margin: 0 auto;
   }
-  /* Two columns; sidebar fixed */
   header {
     position: fixed !important;
     float: left !important;
     top: 0 !important;
     width: clamp(220px, 26vw, 280px) !important;
-    display: block !important; /* undo portrait flex */
+    display: block !important;
   }
   section {
     float: right !important;
@@ -775,7 +775,6 @@ header .sidebar-icons svg {
     margin: 0 !important;
     padding-bottom: 50px !important;
   }
-  /* IMPORTANT: prevent footer overlay while scrolling */
   footer {
     position: static !important;
     float: none !important;
@@ -783,7 +782,6 @@ header .sidebar-icons svg {
     bottom: auto !important;
     margin-top: 24px !important;
   }
-  /* Mobile title off in landscape */
   .mobile-title {
     display: none !important;
   }
