@@ -551,34 +551,6 @@ strong {
 }
 
 /* ===== Responsive (theme) ===== */
-@media print, screen and (max-width: 960px) {
-  div.wrapper {
-    width: auto;
-    margin: 0;
-  }
-  header, section, footer {
-    float: none;
-    position: static;
-    width: auto;
-  }
-  header {
-    padding-right: 320px;
-  }
-  section {
-    border: 1px solid #e5e5e5;
-    border-width: 1px 0;
-    padding: 20px 0;
-    margin: 0 0 20px;
-  }
-  header a small {
-    display: inline;
-  }
-  header ul {
-    position: absolute;
-    right: 50px;
-    top: 52px;
-  }
-}
 @media print, screen and (max-width: 720px) {
   body {
     word-wrap: break-word;
@@ -746,6 +718,57 @@ header .sidebar-icons svg {
   section h1,
   section > h1:first-child {
     display: none !important;
+  }
+}
+/* =========================================================
+   Only PHONE PORTRAIT => stacked
+   Everything else => two-column (default)
+   ========================================================= */
+/* Phone portrait: typical phones are <= 480–600px wide in portrait.
+   Use 600px to cover most phones without catching iPads. */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  /* wrapper becomes fluid */
+  .wrapper, div.wrapper {
+    width: auto;
+    margin: 0;
+  }
+  /* stacked flow */
+  header, section, footer {
+    float: none !important;
+    position: static !important;
+    width: auto !important;
+  }
+  /* header becomes vertical + centered like your mobile design */
+  header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  /* show mobile title */
+  .mobile-title {
+    display: block !important;
+    order: 1 !important;
+    text-align: center !important;
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    margin: 0 0 14px !important;
+  }
+  header .avatar {
+    order: 2 !important;
+    margin: 0 0 24px !important;
+  }
+  header .sidebar {
+    order: 3 !important;
+    text-align: center !important;
+  }
+  /* hide section h1 in stacked phone layout */
+  section h1,
+  section > h1:first-child {
+    display: none !important;
+  }
+  /* footer flows normally under content */
+  footer {
+    margin-top: 18px !important;
   }
 }
 
