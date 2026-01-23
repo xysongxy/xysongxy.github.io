@@ -554,6 +554,11 @@ header .sidebar-text {
   color: #000000;
 }
 
+header .sidebar-text a:hover, a:focus {
+  color: #800000;
+  font-weight: bold;
+}
+
 header .sidebar-email {
   display: inline-block;
   font-size: 18px;
