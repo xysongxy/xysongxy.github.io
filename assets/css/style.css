@@ -645,7 +645,6 @@ header .sidebar-icons svg {
    overlap sidebar content (so make footer flow below content)
    ========================================================= */
 @media screen and (orientation: landscape) and (max-width: 900px) {
-  /* ONE shared start line */
   :root {
     --content-top: 16px;
   } /* adjust to taste */
@@ -669,6 +668,14 @@ header .sidebar-icons svg {
   /* MOST IMPORTANT: prevent the first element inside section from pushing down */
   section > :first-child {
     margin-top: 0 !important;
+  }
+  footer {
+    position: static !important;
+    float: none !important;
+    width: auto !important;
+    margin-left: calc(clamp(220px, 28vw, 260px) + 40px) !important;
+    margin-top: 24px !important;
+    font-size: 6px !important;
   }
 }
 
