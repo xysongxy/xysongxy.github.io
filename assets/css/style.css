@@ -784,5 +784,8 @@ header .sidebar-icons svg {
     display: none !important;
   }
 }
+section h1 {
+  text-align: center;
+}
 
 /*# sourceMappingURL=style.css.map */
