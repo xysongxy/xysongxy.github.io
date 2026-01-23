@@ -645,11 +645,19 @@ header .sidebar-icons svg {
    overlap sidebar content (so make footer flow below content)
    ========================================================= */
 @media screen and (orientation: landscape) and (max-width: 900px) {
+  header {
+    position: fixed !important;
+    top: 0 !important;
+    bottom: 0 !important; /* make the left panel full height */
+    width: clamp(220px, 28vw, 260px) !important;
+    overflow-y: auto !important; /* scroll sidebar if it’s tall */
+    padding-bottom: 70px !important; /* reserve space for footer */
+  }
   footer {
     position: fixed !important;
-    float: left !important;
-    width: auto !important;
-    bottom: 20px !important;
+    left: auto !important; /* keep normal left positioning */
+    bottom: 50px !important;
+    width: clamp(220px, 28vw, 260px) !important;
   }
 }
 
