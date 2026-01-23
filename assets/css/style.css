@@ -677,7 +677,7 @@ header .sidebar-text {
 header .sidebar-email {
   display: inline-block;
   font-size: 18px;
-  margin-top: 0 px;
+  margin-top: 0px;
   color: #8b0000;
   text-decoration: none;
 }
@@ -749,37 +749,65 @@ header .sidebar-icons svg {
   }
 }
 /* =========================================================
-   Phone landscape: force "laptop" two-column layout
+   FINAL RESPONSIVE POLICY
+   - Portrait (<=1024): mobile/stacked (includes iPad portrait + phones)
+   - Landscape phones: laptop/two-column
+   - Landscape iPad: naturally laptop already
    ========================================================= */
+/* 1) Portrait phones + tablets => MOBILE (stacked) */
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+  .wrapper, div.wrapper {
+    width: auto !important;
+    margin: 0 !important;
+  }
+  header, section, footer {
+    float: none !important;
+    position: static !important;
+    width: auto !important;
+  }
+  section {
+    border: 1px solid #e5e5e5 !important;
+    border-width: 1px 0 !important;
+    padding: 20px 0 !important;
+    margin: 0 0 20px !important;
+  }
+  /* show title block in mobile/stacked mode */
+  .mobile-title {
+    display: block !important;
+    text-align: center !important;
+  }
+}
+/* 2) LANDSCAPE PHONES => LAPTOP (two-column) */
 @media screen and (orientation: landscape) and (max-width: 960px) and (min-width: 640px) {
   /* restore desktop wrapper width */
   .wrapper, div.wrapper {
     width: 1000px !important;
     margin: 0 auto !important;
   }
-  /* restore desktop sidebar + content columns */
+  /* restore desktop columns */
   header {
     position: fixed !important;
     float: left !important;
     width: 250px !important;
     top: 0 !important;
-    display: block !important; /* undo mobile flex */
+    display: block !important; /* undo any mobile flex */
   }
+  section {
+    float: right !important;
+    width: 650px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  /* IMPORTANT: don't let footer overlay the text while scrolling */
   footer {
     position: static !important;
     float: none !important;
     width: auto !important;
     bottom: auto !important;
-    margin-top: 24px;
+    margin-top: 24px !important;
   }
-  section {
-    float: right !important;
-    width: 650px !important;
-    border: 0 !important; /* undo mobile border */
-    padding: 0 !important; /* undo mobile padding */
-    margin: 0 !important; /* undo mobile margin */
-  }
-  /* hide the mobile-only title in landscape "desktop mode" */
+  /* hide mobile title in landscape laptop-mode */
   .mobile-title {
     display: none !important;
   }
