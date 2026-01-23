@@ -766,10 +766,11 @@ header .sidebar-icons svg {
     display: block !important; /* undo mobile flex */
   }
   footer {
-    position: fixed !important;
-    float: left !important;
-    width: 250px !important;
-    bottom: 50px !important;
+    position: static !important;
+    float: none !important;
+    width: auto !important;
+    bottom: auto !important;
+    margin-top: 24px;
   }
   section {
     float: right !important;
