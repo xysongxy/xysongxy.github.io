@@ -652,7 +652,7 @@ header .sidebar-icons svg {
     bottom: 0 !important;
     width: clamp(220px, 28vw, 260px) !important;
     overflow-y: auto !important;
-    padding-bottom: 70px !important;
+    padding-bottom: 50px !important;
   }
   footer {
     position: static !important;
