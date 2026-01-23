@@ -713,7 +713,7 @@ header .sidebar-icons svg {
 }
 
 /* 2. Mobile layout fix */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024px) {
   /* Make header a vertical flex container */
   header {
     display: flex;
@@ -742,7 +742,7 @@ header .sidebar-icons svg {
   }
 }
 /* 3. Hide main content H1 on mobile */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024px) {
   section h1,
   section > h1:first-child {
     display: none !important;
