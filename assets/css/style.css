@@ -551,66 +551,8 @@ strong {
 }
 
 /* ===== Responsive (theme) ===== */
-@media print, screen and (max-width: 960px) {
-  div.wrapper {
-    width: auto;
-    margin: 0;
-  }
-  header, section, footer {
-    float: none;
-    position: static;
-    width: auto;
-  }
-  header {
-    padding-right: 320px;
-  }
-  section {
-    border: 1px solid #e5e5e5;
-    border-width: 1px 0;
-    padding: 20px 0;
-    margin: 0 0 20px;
-  }
-  header a small {
-    display: inline;
-  }
-  header ul {
-    position: absolute;
-    right: 50px;
-    top: 52px;
-  }
-}
-@media print, screen and (max-width: 720px) {
-  body {
-    word-wrap: break-word;
-  }
-  header {
-    padding: 0;
-  }
-  header ul, header p.view {
-    position: static;
-  }
-  pre, code {
-    word-wrap: normal;
-  }
-}
-@media print, screen and (max-width: 480px) {
-  body {
-    padding: 15px;
-  }
-  .downloads {
-    width: 99%;
-  }
-  .downloads li, .downloads li + li + li {
-    width: 33%;
-  }
-}
-@media print {
-  body {
-    padding: 0.4in;
-    font-size: 12pt;
-    color: #444;
-  }
-}
+/* ===== Responsive (theme) ===== */
+/* Disabled: layout is controlled by ORIENTATION rules below */
 /* =========================================================
    Custom: mobile title + hide main H1 on mobile
    ========================================================= */
@@ -749,36 +691,99 @@ header .sidebar-icons svg {
   }
 }
 /* =========================================================
-   Phone landscape: force "laptop" two-column layout
+   ORIENTATION RULES (FINAL)
+   Landscape => two-column laptop layout
+   Portrait  => stacked phone layout
    ========================================================= */
-@media screen and (orientation: landscape) and (max-width: 960px) and (min-width: 640px) {
-  /* restore desktop wrapper width */
-  .wrapper, div.wrapper {
-    width: 1000px !important;
-    margin: 0 auto !important;
+/* ---------- PORTRAIT (vertical): STACKED layout ---------- */
+@media screen and (orientation: portrait) {
+  /* Make padding scale nicely across phones/iPads */
+  body {
+    padding: clamp(12px, 4vw, 50px);
   }
-  /* restore desktop sidebar + content columns */
+  .wrapper, div.wrapper {
+    width: min(92vw, 700px);
+    margin: 0 auto;
+  }
+  header, section, footer {
+    float: none !important;
+    position: static !important;
+    width: auto !important;
+  }
+  /* Header becomes stacked; title above avatar */
+  header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .mobile-title {
+    display: block !important;
+    order: 1 !important;
+    text-align: center !important;
+    font-size: clamp(24px, 5vw, 34px) !important;
+    font-weight: 700 !important;
+    color: #222 !important;
+    margin: 6px 0 14px !important;
+  }
+  header .avatar {
+    order: 2 !important;
+    margin: 0 0 20px !important;
+  }
+  header .sidebar {
+    order: 3 !important;
+    text-align: center !important;
+  }
+  /* Stacked section styling */
+  section {
+    border: 1px solid #e5e5e5 !important;
+    border-width: 1px 0 !important;
+    padding: 18px 0 !important;
+    margin: 0 0 18px !important;
+  }
+  /* (same as your mobile behavior) hide section H1 in portrait */
+  section h1,
+  section > h1:first-child {
+    display: none !important;
+  }
+  /* Footer flows normally (no overlay) */
+  footer {
+    margin-top: 18px !important;
+  }
+}
+/* ---------- LANDSCAPE (horizontal): TWO-COLUMN layout ---------- */
+@media screen and (orientation: landscape) {
+  body {
+    padding: clamp(12px, 3vw, 50px);
+  }
+  .wrapper, div.wrapper {
+    width: min(1100px, 94vw);
+    margin: 0 auto;
+  }
+  /* Two columns; sidebar fixed */
   header {
     position: fixed !important;
     float: left !important;
-    width: 250px !important;
     top: 0 !important;
-    display: block !important; /* undo mobile flex */
-  }
-  footer {
-    position: fixed !important;
-    float: left !important;
-    width: 250px !important;
-    bottom: 50px !important;
+    width: clamp(220px, 26vw, 280px) !important;
+    display: block !important; /* undo portrait flex */
   }
   section {
     float: right !important;
-    width: 650px !important;
-    border: 0 !important; /* undo mobile border */
-    padding: 0 !important; /* undo mobile padding */
-    margin: 0 !important; /* undo mobile margin */
+    width: calc(100% - clamp(220px, 26vw, 280px) - 40px) !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    padding-bottom: 50px !important;
   }
-  /* hide the mobile-only title in landscape "desktop mode" */
+  /* IMPORTANT: prevent footer overlay while scrolling */
+  footer {
+    position: static !important;
+    float: none !important;
+    width: auto !important;
+    bottom: auto !important;
+    margin-top: 24px !important;
+  }
+  /* Mobile title off in landscape */
   .mobile-title {
     display: none !important;
   }
