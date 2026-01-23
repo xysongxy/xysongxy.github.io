@@ -646,7 +646,7 @@ header .sidebar-icons svg {
    ========================================================= */
 @media screen and (orientation: landscape) and (max-width: 900px) {
   :root {
-    --content-top: 16px;
+    --content-top: 50px;
   } /* adjust to taste */
   /* left column */
   header {
