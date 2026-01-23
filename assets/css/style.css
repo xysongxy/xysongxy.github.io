@@ -471,8 +471,20 @@ section ul {
 }
 
 .site-title-link {
-  color: inherit;
+  color: #000;
   text-decoration: none;
+}
+
+.site-title-link:visited {
+  color: #800000;
+}
+
+.site-title-link:active {
+  color: #800000;
+}
+
+.site-title-link:hover {
+  text-decoration: underline;
 }
 
 h1 a {
