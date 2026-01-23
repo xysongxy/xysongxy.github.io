@@ -645,22 +645,34 @@ header .sidebar-icons svg {
    overlap sidebar content (so make footer flow below content)
    ========================================================= */
 @media screen and (orientation: landscape) and (max-width: 900px) {
+  /* one shared top offset for BOTH columns */
+  :root {
+    --top-gap: 16px;
+  } /* adjust this number if you want */
   header {
     position: fixed !important;
-    top: 1rem !important; /* ✅ space from top */
+    top: var(--top-gap) !important;
     bottom: 0 !important;
     width: clamp(220px, 28vw, 260px) !important;
     overflow-y: auto !important;
     padding-bottom: 70px !important;
   }
   section {
+    /* right column starts at SAME top line */
     margin-left: calc(clamp(220px, 28vw, 260px) + 40px) !important;
+    padding-top: var(--top-gap) !important;
+    /* prevent the first element’s margin from pushing content down */
+    padding-bottom: 50px !important;
+  }
+  /* This is the key that fixes "right column looks lower" */
+  section > :first-child {
+    margin-top: 0 !important;
   }
   footer {
     position: static !important;
     float: none !important;
     width: auto !important;
-    margin-left: calc(clamp(220px, 28vw, 260px) + 40px);
+    margin-left: calc(clamp(220px, 28vw, 260px) + 40px) !important;
     margin-top: 24px !important;
     font-size: 6px !important;
   }
