@@ -647,7 +647,7 @@ header .sidebar-icons svg {
 @media screen and (orientation: landscape) and (max-width: 900px) {
   header {
     position: fixed !important;
-    padding-top: 50px !important;
+    padding-top: 60px !important;
     top: 0 !important; /* ✅ space from top */
     bottom: 0 !important;
     width: clamp(220px, 28vw, 260px) !important;
