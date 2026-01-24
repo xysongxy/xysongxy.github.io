@@ -621,12 +621,12 @@ header .sidebar-icons svg {
   section {
     float: none;
     margin-left: calc(clamp(220px, 28vw, 260px) + 40px);
-    /* 👇 proportional to screen, but bounded */
+    /* proportional to screen, but bounded */
     width: clamp(420px, 56vw, 680px);
-    /* 👇 ensure it never exceeds the remaining space in wrapper */
+    /* ensure it never exceeds the remaining space in wrapper */
     max-width: calc(100% - clamp(220px, 28vw, 260px) - 40px);
     box-sizing: border-box;
-    padding-right: 60px;
+    padding-right: 50px;
     padding-bottom: 50px;
   }
   footer {
