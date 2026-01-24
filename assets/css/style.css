@@ -504,7 +504,7 @@ header {
 }
 
 section {
-  width: 600px;
+  width: 650px;
   float: right;
   padding-bottom: 50px;
 }
@@ -612,6 +612,7 @@ header .sidebar-icons svg {
   .wrapper, div.wrapper {
     width: min(96vw, 1000px);
     margin: 0 auto;
+    padding-right: 24px;
   }
   header {
     width: clamp(220px, 28vw, 260px);
