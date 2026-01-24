@@ -621,10 +621,10 @@ header .sidebar-icons svg {
   section {
     float: none;
     margin-left: calc(clamp(220px, 28vw, 260px) + 40px);
-    width: calc(100% - clamp(220px, 28vw, 260px) - 40px); /* 👈 key */
+    width: calc(100% - clamp(220px, 28vw, 260px));
     max-width: 100%;
     box-sizing: border-box;
-    padding-right: 40px;
+    padding-right: 60px;
     padding-bottom: 50px;
   }
   footer {
