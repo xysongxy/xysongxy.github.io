@@ -612,18 +612,20 @@ header .sidebar-icons svg {
   .wrapper, div.wrapper {
     width: min(96vw, 1000px);
     margin: 0 auto;
-    padding-right: 24px;
+    padding: 0 24px; /* left+right padding, safer */
+    box-sizing: border-box;
   }
   header {
     width: clamp(220px, 28vw, 260px);
   }
   section {
-    width: auto;
     float: none;
     margin-left: calc(clamp(220px, 28vw, 260px) + 40px);
+    width: calc(100% - clamp(220px, 28vw, 260px) - 40px); /* 👈 key */
+    max-width: 100%;
+    box-sizing: border-box;
     padding-bottom: 50px;
   }
-  /* keep footer fixed on tablet/desktop-sized screens */
   footer {
     width: clamp(220px, 28vw, 260px);
   }
