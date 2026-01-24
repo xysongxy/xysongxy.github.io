@@ -612,25 +612,22 @@ header .sidebar-icons svg {
   .wrapper, div.wrapper {
     width: min(96vw, 1000px);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 40px; /* same gutter left & right */
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: clamp(220px, 28vw, 260px) 1fr;
+    column-gap: 40px; /* space between columns */
+    align-items: start;
   }
-  header {
-    width: clamp(220px, 28vw, 260px);
+  header, footer {
+    width: auto; /* grid controls width */
   }
   section {
-    float: none;
-    margin-left: calc(clamp(220px, 28vw, 260px) + 40px);
-    /* 👇 proportional to screen, but bounded */
-    width: clamp(420px, 56vw, 680px);
-    /* 👇 ensure it never exceeds the remaining space in wrapper */
-    max-width: calc(100% - clamp(220px, 28vw, 260px) - 40px);
-    box-sizing: border-box;
-    padding-right: 60px;
+    float: none !important; /* ensure float is off */
+    width: auto;
+    margin: 0; /* remove margin-left calc */
     padding-bottom: 50px;
-  }
-  footer {
-    width: clamp(220px, 28vw, 260px);
+    min-width: 0; /* IMPORTANT: prevents overflow from long text */
   }
 }
 /* =========================================================
