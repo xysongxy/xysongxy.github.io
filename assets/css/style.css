@@ -624,6 +624,7 @@ header .sidebar-icons svg {
     width: calc(100% - clamp(220px, 28vw, 260px) - 40px); /* 👈 key */
     max-width: 100%;
     box-sizing: border-box;
+    padding-right: 40px;
     padding-bottom: 50px;
   }
   footer {
