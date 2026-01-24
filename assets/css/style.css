@@ -612,22 +612,24 @@ header .sidebar-icons svg {
   .wrapper, div.wrapper {
     width: min(96vw, 1000px);
     margin: 0 auto;
-    padding: 0 40px; /* same gutter left & right */
+    padding: 0 24px;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: clamp(220px, 28vw, 260px) 1fr;
-    column-gap: 40px; /* space between columns */
+    column-gap: 40px;
     align-items: start;
   }
   header, footer {
-    width: auto; /* grid controls width */
+    width: auto; /* grid controls it */
   }
   section {
-    float: none !important; /* ensure float is off */
-    width: auto;
-    margin: 0; /* remove margin-left calc */
+    float: none !important;
+    margin: 0 !important; /* remove margin-left positioning */
+    width: auto !important; /* remove vw width */
+    max-width: none !important;
+    min-width: 0; /* prevents overflow pushing layout */
+    padding-right: 0; /* optional; add if you want extra gutter */
     padding-bottom: 50px;
-    min-width: 0; /* IMPORTANT: prevents overflow from long text */
   }
 }
 /* =========================================================
