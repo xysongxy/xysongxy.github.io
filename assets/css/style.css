@@ -612,7 +612,7 @@ header .sidebar-icons svg {
   .wrapper, div.wrapper {
     width: min(96vw, 1000px);
     margin: 0 auto;
-    padding: 0 24px; /* left+right padding, safer */
+    padding: 0 24px;
     box-sizing: border-box;
   }
   header {
@@ -621,8 +621,10 @@ header .sidebar-icons svg {
   section {
     float: none;
     margin-left: calc(clamp(220px, 28vw, 260px) + 40px);
-    width: calc(100% - clamp(220px, 28vw, 260px));
-    max-width: 100%;
+    /* 👇 proportional to screen, but bounded */
+    width: clamp(420px, 56vw, 680px);
+    /* 👇 ensure it never exceeds the remaining space in wrapper */
+    max-width: calc(100% - clamp(220px, 28vw, 260px) - 40px);
     box-sizing: border-box;
     padding-right: 60px;
     padding-bottom: 50px;
