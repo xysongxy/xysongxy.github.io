@@ -614,22 +614,23 @@ header .sidebar-icons svg {
     margin: 0 auto;
     padding: 0 24px;
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: clamp(220px, 28vw, 260px) 1fr;
-    column-gap: 40px;
-    align-items: start;
   }
-  header, footer {
-    width: auto; /* grid controls it */
+  header {
+    width: clamp(220px, 28vw, 260px);
   }
   section {
-    float: none !important;
-    margin: 0 !important; /* remove margin-left positioning */
-    width: auto !important; /* remove vw width */
-    max-width: none !important;
-    min-width: 0; /* prevents overflow pushing layout */
-    padding-right: 0; /* optional; add if you want extra gutter */
+    float: none;
+    margin-left: calc(clamp(220px, 28vw, 260px) + 40px);
+    /* 👇 proportional to screen, but bounded */
+    width: clamp(420px, 56vw, 680px);
+    /* 👇 ensure it never exceeds the remaining space in wrapper */
+    max-width: calc(100% - clamp(220px, 28vw, 260px) - 40px);
+    box-sizing: border-box;
+    padding-right: 60px;
     padding-bottom: 50px;
+  }
+  footer {
+    width: clamp(220px, 28vw, 260px);
   }
 }
 /* =========================================================
