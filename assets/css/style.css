@@ -52,8 +52,9 @@ a {
   text-decoration: none;
 }
 
-a:hover, a:focus-visible {
-  text-decoration: underline;
+a:hover, a:focus {
+  color: var(--accent);
+  font-weight: bold;
 }
 
 .site-title-link, h1 a {
