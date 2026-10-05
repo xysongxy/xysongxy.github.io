@@ -26,10 +26,10 @@
   <body>
     <div class="wrapper">
 
-      <!-- LEFT SIDEBAR -->
+      <aside class="site-sidebar">
       <header>
         
-          <img class="avatar" src="/assets/img/avatar.JPG" alt="avatar">
+          <img class="avatar" src="/assets/img/avatar.JPG" alt="Xiangyu Song" width="3596" height="3662" decoding="async">
         
 
         <!-- ✅ Mobile-only title (no hardcode) -->
@@ -71,7 +71,7 @@
           
             <div class="sidebar-section">
               <div class="sidebar-title">Contact Information</div>
-              <a class="sidebar-email" href="mailto:xiangyusong[at]wustl.edu">
+              <a class="sidebar-email" href="mailto:xiangyusong@wustl.edu">
                 xiangyusong[at]wustl.edu
               </a>
             </div>
@@ -123,8 +123,20 @@
         </div>
       </header>
 
+      <!-- FOOTER -->
+      <footer>
+        <p>
+          &copy; <span id="currentYear"></span> Xiangyu Song.
+        </p>
+        <script>
+          document.getElementById("currentYear").innerText =
+            new Date().getFullYear();
+        </script>
+      </footer>
+      </aside>
+
       <!-- MAIN CONTENT -->
-      <section>
+      <main class="site-content">
         <h1 id="xiangyu-song-宋翔宇">Xiangyu Song <a href="./chinese.html">宋翔宇</a></h1>
 
 <p>Welcome! I am a Ph.D. student in Political Science at Washington University in St. Louis (WashU), where I also hold a M.A. in Statistics.</p>
@@ -164,18 +176,9 @@
 </ul>
 
 
-      </section>
+      </main>
 
-      <!-- FOOTER -->
-      <footer>
-        <p>
-          &copy; <span id="currentYear"></span> Xiangyu Song.
-        </p>
-        <script>
-          document.getElementById("currentYear").innerText =
-            new Date().getFullYear();
-        </script>
-      </footer>
+
 
     </div>
   </body>
