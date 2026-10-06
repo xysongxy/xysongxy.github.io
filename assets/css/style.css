@@ -149,9 +149,15 @@ small {
   height: calc(100dvh - 2 * var(--page-padding));
 }
 
+/* Keep the sidebar scrollable without displaying a scrollbar. */
 .site-sidebar header {
   min-height: 0;
   overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.site-sidebar header::-webkit-scrollbar {
+  display: none;
 }
 
 .site-content {
